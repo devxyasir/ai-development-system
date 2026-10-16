@@ -1,0 +1,83 @@
+/*
+  Illustrative token file. The structure is the point; replace every value with
+  decisions from your own design rationale and verify contrast with the
+  color-palette-selection skill before using any pair.
+*/
+:root {
+  color-scheme: light dark;
+
+  /* Tier 1: primitives (raw values, never used directly in components) */
+  --p-paper-50: #faf6ef;
+  --p-paper-100: #f1ebe0;
+  --p-ink-900: #1f1b16;
+  --p-ink-600: #5b5348;
+  --p-night-900: #17140f;
+  --p-night-800: #221e18;
+  --p-vermilion-600: #b8400f;
+  --p-vermilion-400: #e0703f;
+  --p-moss-600: #3f6b45;
+  --p-amber-700: #8a5500;
+  --p-rose-700: #9f1d2c;
+
+  /* Tier 2: semantic tokens (light, dark) */
+  --color-bg: light-dark(var(--p-paper-50), var(--p-night-900));
+  --color-surface: light-dark(var(--p-paper-100), var(--p-night-800));
+  --color-text: light-dark(var(--p-ink-900), var(--p-paper-50));
+  --color-text-muted: light-dark(var(--p-ink-600), #b9b0a2);
+  --color-border: light-dark(rgb(31 27 22 / 0.18), rgb(250 246 239 / 0.2));
+  --color-action: light-dark(var(--p-vermilion-600), var(--p-vermilion-400));
+  --color-on-action: light-dark(var(--p-paper-50), var(--p-night-900));
+  --color-focus: light-dark(var(--p-ink-900), var(--p-paper-50));
+  --color-success: light-dark(var(--p-moss-600), #7fb287);
+  --color-warning: light-dark(var(--p-amber-700), #e0a53a);
+  --color-danger: light-dark(var(--p-rose-700), #f08a96);
+
+  /* Spacing (4 px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Shape */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+
+  /* Type */
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.953rem;
+  --leading-body: 1.55;
+  --leading-heading: 1.2;
+
+  /* Motion (see motion-design skill for reasoning) */
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 320ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
+
+/* Component token example: only where a component needs its own knob */
+.button {
+  --button-bg: var(--color-action);
+  --button-fg: var(--color-on-action);
+  background: var(--button-bg);
+  color: var(--button-fg);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+.button:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }

@@ -1,0 +1,15 @@
+{
+  "name": "frontend-professional",
+  "description": "Professional front-end work: architecture, components, design-to-code, responsive layout, performance, testing, visual QA and accessibility.",
+  "when_to_use": "Use when building or maintaining web front ends from design references or product requirements.",
+  "skills": [
+    "frontend-architecture",
+    "component-engineering",
+    "design-to-code",
+    "layout-and-responsive-design",
+    "frontend-performance",
+    "frontend-testing",
+    "visual-qa",
+    "accessibility-review"
+  ]
+}

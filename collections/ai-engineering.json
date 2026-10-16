@@ -1,0 +1,14 @@
+{
+  "name": "ai-engineering",
+  "description": "Skills for AI products: LLM and retrieval engineering, evaluation, security, observability, cost and latency analysis.",
+  "when_to_use": "Use when adding LLM, RAG, agent or machine-learning features to an application.",
+  "skills": [
+    "ai-llm-engineering",
+    "requirements-and-research",
+    "architecture-decisions",
+    "security-review",
+    "testing-strategy",
+    "performance-analysis",
+    "observability-and-incident-response"
+  ]
+}

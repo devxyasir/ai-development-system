@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skill collection",
+  "description": "A curated, named group of skills. Stored as collections/<name>.json. 'includes' composes other collections; resolution is depth-first and de-duplicated.",
+  "type": "object",
+  "required": ["name", "description", "when_to_use", "skills"],
+  "additionalProperties": false,
+  "properties": {
+    "name": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "maxLength": 64 },
+    "description": { "type": "string", "minLength": 20, "maxLength": 300 },
+    "when_to_use": { "type": "string", "minLength": 20, "maxLength": 400 },
+    "includes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+    },
+    "skills": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "maxLength": 64 }
+    }
+  }
+}

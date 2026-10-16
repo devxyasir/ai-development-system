@@ -1,0 +1,13 @@
+{
+  "name": "backend-professional",
+  "description": "Backend engineering: architecture decisions, API design, database engineering, security review, testing and performance analysis.",
+  "when_to_use": "Use when building or reviewing services, APIs, data layers and their reliability and security.",
+  "skills": [
+    "architecture-decisions",
+    "backend-api-design",
+    "database-engineering",
+    "security-review",
+    "testing-strategy",
+    "performance-analysis"
+  ]
+}

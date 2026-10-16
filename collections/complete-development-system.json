@@ -1,0 +1,16 @@
+{
+  "name": "complete-development-system",
+  "description": "General-purpose engineering, delivery and design skills plus tooling for managing skills. Specialist areas (motion, AI, games, desktop and mobile) are separate collections.",
+  "when_to_use": "Use as the baseline set for a general project. Skills load progressively in supporting agents, so only names and descriptions cost context until a task matches.",
+  "includes": [
+    "full-stack-engineering",
+    "design-essentials"
+  ],
+  "skills": [
+    "refactoring",
+    "observability-and-incident-response",
+    "documentation-and-handoff",
+    "skill-authoring",
+    "skill-installation"
+  ]
+}

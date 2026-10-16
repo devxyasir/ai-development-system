@@ -1,0 +1,956 @@
+{
+  "version": "0.1.0",
+  "generated_by": "scripts/build-collections.py",
+  "skills": [
+    {
+      "name": "animation-planning-and-review",
+      "category": "animation-production",
+      "path": "skills/animation-production/animation-planning-and-review",
+      "description": "Plans animation work before building (goals, storyboard, timing table, easing, assets, acceptance criteria) and reviews finished animation against a rubric with severity levels. Use when a request involves multi-step, multi-element or story-driven animation, when handing animation work to another agent, or when reviewing animation quality before release.",
+      "version": "0.1.0",
+      "related": [
+        "motion-design",
+        "cinematic-motion",
+        "ui-animation",
+        "animation-performance",
+        "reduced-motion-accessibility",
+        "visual-qa"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/quality-review-rubric.md",
+        "templates/storyboard.md"
+      ]
+    },
+    {
+      "name": "ci-cd-and-deployment",
+      "category": "delivery",
+      "path": "skills/delivery/ci-cd-and-deployment",
+      "description": "Plans and executes CI/CD, deployment and release work: build pipelines, automated checks, environments and secrets, containers, infrastructure as code, choosing hosting (static, PaaS, VPS, containers, serverless), migrations during deploys, health checks, rollback, release versioning and changelogs, and post-deployment verification with evidence. Use when setting up pipelines, deploying an application, preparing a release, or reviewing deployment risk.",
+      "version": "0.1.0",
+      "related": [
+        "git-and-github",
+        "security-review",
+        "observability-and-incident-response",
+        "database-engineering",
+        "documentation-and-handoff"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/deployment-options.md",
+        "templates/release-checklist.md"
+      ]
+    },
+    {
+      "name": "documentation-and-handoff",
+      "category": "delivery",
+      "path": "skills/delivery/documentation-and-handoff",
+      "description": "Writes and maintains project documentation and handoffs: README and quick start, setup and configuration references, architecture notes, API docs, runbooks, troubleshooting, release notes, migration guides, contributor guidance, and progress records for long tasks or handing work to another engineer or model. Use when documenting a project, updating docs after a change, or ending a session with unfinished work.",
+      "version": "0.1.0",
+      "related": [
+        "architecture-decisions",
+        "ci-cd-and-deployment",
+        "development-operating-rules",
+        "git-and-github"
+      ],
+      "files": [
+        "SKILL.md",
+        "templates/project-handoff.md"
+      ]
+    },
+    {
+      "name": "git-and-github",
+      "category": "delivery",
+      "path": "skills/delivery/git-and-github",
+      "description": "Safe Git and GitHub collaboration: inspecting repository state, branching, atomic commits, reviewing staged diffs, resolving merge conflicts, pull requests and descriptions, protected branches, CI checks, secret scanning, tags and changelogs, and recovering from mistakes without destroying work. Use when committing, branching, merging, opening or reviewing pull requests, or when Git state looks wrong.",
+      "version": "0.1.0",
+      "related": [
+        "code-review",
+        "ci-cd-and-deployment",
+        "security-review",
+        "development-operating-rules"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/pull-request-checklist.md"
+      ]
+    },
+    {
+      "name": "observability-and-incident-response",
+      "category": "delivery",
+      "path": "skills/delivery/observability-and-incident-response",
+      "description": "Makes systems diagnosable and handles production incidents: structured logs, metrics, traces, health checks, alerts, SLIs and SLOs, timeouts and backpressure, and the incident process of triage, mitigation, communication, recovery and blameless post-incident review. Use when adding logging or monitoring, designing alerts, investigating a production problem, or responding to an outage.",
+      "version": "0.1.0",
+      "related": [
+        "debugging",
+        "ci-cd-and-deployment",
+        "backend-api-design",
+        "security-review",
+        "performance-analysis"
+      ],
+      "files": [
+        "SKILL.md",
+        "templates/incident-report.md"
+      ]
+    },
+    {
+      "name": "accessibility-review",
+      "category": "design",
+      "path": "skills/design/accessibility-review",
+      "description": "Reviews and fixes accessibility of web interfaces against WCAG 2.2 AA: keyboard operation, focus, names and roles, forms and errors, contrast, reflow, target size, motion, and screen-reader behavior, with severity ratings. Use when building or auditing UI, before release, when asked about accessibility, ARIA, keyboard support or screen readers.",
+      "version": "0.1.0",
+      "related": [
+        "visual-qa",
+        "color-palette-selection",
+        "reduced-motion-accessibility",
+        "frontend-testing"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/wcag-review-checklist.md"
+      ]
+    },
+    {
+      "name": "color-palette-selection",
+      "category": "design",
+      "path": "skills/design/color-palette-selection",
+      "description": "Selects and verifies a color palette: brand and neutral ramps, semantic roles, interactive states, chart colors, dark theme, with measured WCAG contrast and color-blind safety. Use when choosing or changing colors, fixing low contrast, adding dark mode, picking chart colors, or when a palette feels random. Includes a contrast-ratio script.",
+      "version": "0.1.0",
+      "related": [
+        "visual-design-direction",
+        "design-system-creation",
+        "accessibility-review"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/palette-method.md",
+        "scripts/contrast.py"
+      ]
+    },
+    {
+      "name": "design-system-creation",
+      "category": "design",
+      "path": "skills/design/design-system-creation",
+      "description": "Creates or extends a design system: tiered design tokens (primitive, semantic, component), spacing, radius, elevation, motion tokens, component variants, theming and documentation, enforced by lint-style checks. Use when starting a UI codebase, when styles are hard-coded and inconsistent, when adding dark mode or themes, or when a component library needs rules.",
+      "version": "0.1.0",
+      "related": [
+        "visual-design-direction",
+        "color-palette-selection",
+        "typography-selection",
+        "component-engineering",
+        "motion-design"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/token-architecture.md",
+        "templates/tokens.css"
+      ]
+    },
+    {
+      "name": "layout-and-responsive-design",
+      "category": "design",
+      "path": "skills/design/layout-and-responsive-design",
+      "description": "Designs layout, spacing, alignment, composition and responsive behavior: grids, spacing scales, breakpoints, container queries, fluid sizing, touch targets, reflow at narrow widths, and right-to-left mirroring. Use when building or fixing a page layout, when a UI breaks on mobile or large screens, when content overflows, or when spacing looks inconsistent.",
+      "version": "0.1.0",
+      "related": [
+        "product-design",
+        "design-system-creation",
+        "visual-qa",
+        "accessibility-review",
+        "typography-selection"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/layout-patterns.md"
+      ]
+    },
+    {
+      "name": "product-design",
+      "category": "design",
+      "path": "skills/design/product-design",
+      "description": "Designs the user journey, information architecture, screen structure and every screen state before any visual styling. Use when planning a new app, dashboard, form flow, onboarding or navigation, when a UI feels confusing, or when asked how a screen or feature should work. Not for choosing colors, fonts or animation.",
+      "version": "0.1.0",
+      "related": [
+        "visual-design-direction",
+        "accessibility-review",
+        "requirements-and-research",
+        "design-to-code"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/ux-patterns.md",
+        "templates/design-brief.md"
+      ]
+    },
+    {
+      "name": "typography-selection",
+      "category": "design",
+      "path": "skills/design/typography-selection",
+      "description": "Selects typefaces and builds a type system: pairing, modular scale, line height and measure, weights, numerals, code, font loading and fallbacks, and multilingual or right-to-left support (Arabic, Urdu, CJK). Use when choosing fonts, fixing hard-to-read text, building a type scale, adding a language, or fixing layout shift from font loading.",
+      "version": "0.1.0",
+      "related": [
+        "visual-design-direction",
+        "design-system-creation",
+        "layout-and-responsive-design",
+        "frontend-performance"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/type-system.md"
+      ]
+    },
+    {
+      "name": "visual-design-direction",
+      "category": "design",
+      "path": "skills/design/visual-design-direction",
+      "description": "Chooses a deliberate visual direction (identity, color strategy, type pairing, shape, density, imagery, motion language) from the product's audience and context so interfaces do not default to generic AI-template looks. Use when starting or redesigning a UI, when output looks generic, or when asked for a distinctive look or brand feel. Produces a one-page design rationale.",
+      "version": "0.1.0",
+      "related": [
+        "product-design",
+        "design-system-creation",
+        "color-palette-selection",
+        "typography-selection",
+        "motion-design"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/anti-generic-defaults.md",
+        "references/direction-method.md",
+        "templates/design-rationale.md"
+      ]
+    },
+    {
+      "name": "architecture-decisions",
+      "category": "engineering",
+      "path": "skills/engineering/architecture-decisions",
+      "description": "Guides architecture work: discovering the existing architecture, mapping requirements to structure, choosing proportionate patterns (layered, modular monolith, microservices, event-driven, hexagonal, plugin), module boundaries, dependency direction, data ownership, failure isolation, and recording decisions in ADRs. Use when starting a system, adding a major capability, splitting or merging services, or when asked which architecture to use.",
+      "version": "0.1.0",
+      "related": [
+        "requirements-and-research",
+        "backend-api-design",
+        "database-engineering",
+        "security-review",
+        "observability-and-incident-response"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/patterns.md",
+        "templates/adr.md",
+        "templates/technical-design.md"
+      ]
+    },
+    {
+      "name": "backend-api-design",
+      "category": "engineering",
+      "path": "skills/engineering/backend-api-design",
+      "description": "Designs and implements backend services and APIs: routing, validation at the boundary, business logic placement, authentication and authorization, error format, idempotency, pagination, transactions, concurrency, background jobs, external service calls with timeouts and retries, rate limiting, structured logging and configuration. Use when adding or changing an endpoint, service or integration, or reviewing an API contract.",
+      "version": "0.1.0",
+      "related": [
+        "database-engineering",
+        "security-review",
+        "testing-strategy",
+        "architecture-decisions",
+        "observability-and-incident-response"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/api-conventions.md",
+        "templates/api-contract.md"
+      ]
+    },
+    {
+      "name": "code-review",
+      "category": "engineering",
+      "path": "skills/engineering/code-review",
+      "description": "Reviews code changes for correctness, design fit, security, tests, performance and maintainability, with severity-ranked, actionable feedback and a clear verdict. Use when asked to review a diff, pull request or file, before merging your own work, or when preparing review feedback.",
+      "version": "0.1.0",
+      "related": [
+        "testing-strategy",
+        "security-review",
+        "git-and-github",
+        "refactoring",
+        "development-operating-rules"
+      ],
+      "files": [
+        "SKILL.md",
+        "templates/review.md"
+      ]
+    },
+    {
+      "name": "database-engineering",
+      "category": "engineering",
+      "path": "skills/engineering/database-engineering",
+      "description": "Designs and changes databases safely: relational and document schema modeling, keys and constraints, indexes and query tuning with EXPLAIN, transactions and isolation, pagination, connection pooling, migrations with rollback, backups and restore, data retention and data quality. Use when creating or altering a schema, writing migrations, fixing slow queries, choosing a database, or handling large datasets.",
+      "version": "0.1.0",
+      "related": [
+        "backend-api-design",
+        "security-review",
+        "performance-analysis",
+        "architecture-decisions",
+        "testing-strategy"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/migrations-and-indexing.md"
+      ]
+    },
+    {
+      "name": "debugging",
+      "category": "engineering",
+      "path": "skills/engineering/debugging",
+      "description": "Finds and fixes bugs by root cause: reproduce, collect evidence, narrow the failure, form and test hypotheses one at a time, make the smallest reliable fix, add a regression test, and verify related behavior. Covers frontend, backend, database, build, dependency, race condition, performance, network, deployment and environment-specific problems. Use for any error, crash, wrong output, flaky behavior or production-only failure.",
+      "version": "0.1.0",
+      "related": [
+        "testing-strategy",
+        "observability-and-incident-response",
+        "git-and-github",
+        "performance-analysis",
+        "development-operating-rules"
+      ],
+      "files": [
+        "SKILL.md",
+        "templates/bug-report.md"
+      ]
+    },
+    {
+      "name": "development-operating-rules",
+      "category": "engineering",
+      "path": "skills/engineering/development-operating-rules",
+      "description": "Global working rules for coding agents: understand before changing, inspect the repository, research instead of guessing, plan proportionately, make small safe changes, verify by running things, and report honestly. Use at the start of any non-trivial software task, when a task is unclear, when work spans several steps, or when deciding how to report completion.",
+      "version": "0.1.0",
+      "related": [
+        "requirements-and-research",
+        "testing-strategy",
+        "debugging",
+        "code-review",
+        "git-and-github"
+      ],
+      "files": [
+        "SKILL.md",
+        "templates/task-plan.md"
+      ]
+    },
+    {
+      "name": "performance-analysis",
+      "category": "engineering",
+      "path": "skills/engineering/performance-analysis",
+      "description": "Investigates and improves performance of back-end code, queries, services and scripts by measuring first: define the metric, capture a baseline, profile, find the bottleneck, change one thing, re-measure and report real numbers. Use when code or an endpoint is slow, memory or CPU is high, a regression appeared, or capacity needs checking. For web page speed use frontend-performance.",
+      "version": "0.1.0",
+      "related": [
+        "database-engineering",
+        "frontend-performance",
+        "debugging",
+        "observability-and-incident-response",
+        "architecture-decisions"
+      ],
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "refactoring",
+      "category": "engineering",
+      "path": "skills/engineering/refactoring",
+      "description": "Restructures existing code safely without changing behavior: establishing safety nets with characterization tests, making small reversible steps, separating refactoring from feature work, removing duplication and dead code, improving names and boundaries, and verifying behavior is unchanged. Use when asked to refactor, clean up, simplify, modernize, or reorganize code or modules.",
+      "version": "0.1.0",
+      "related": [
+        "testing-strategy",
+        "code-review",
+        "architecture-decisions",
+        "git-and-github"
+      ],
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "requirements-and-research",
+      "category": "engineering",
+      "path": "skills/engineering/requirements-and-research",
+      "description": "Turns vague requests into requirements and researches unfamiliar technologies with evidence: separating facts, assumptions and constraints, identifying users and acceptance criteria, using official documentation, verifying that APIs and versions exist, comparing options, recording sources, and knowing when to stop. Use when a request is unclear, when a library or API is unfamiliar, when comparing technologies, or before writing a specification.",
+      "version": "0.1.0",
+      "related": [
+        "architecture-decisions",
+        "development-operating-rules",
+        "product-design",
+        "ai-llm-engineering"
+      ],
+      "files": [
+        "SKILL.md",
+        "templates/requirements-spec.md",
+        "templates/research-findings.md",
+        "templates/technology-evaluation.md"
+      ]
+    },
+    {
+      "name": "security-review",
+      "category": "engineering",
+      "path": "skills/engineering/security-review",
+      "description": "Performs security design and review: threat modeling, trust boundaries, authentication and authorization, session and password handling, injection, XSS, CSRF, SSRF, path traversal, file uploads, secrets, dependencies and supply chain, encryption, logging of sensitive data, and secure deployment. Use when building features that handle user input, authentication, data or files, before release, or when asked for a security review.",
+      "version": "0.1.0",
+      "related": [
+        "backend-api-design",
+        "database-engineering",
+        "ci-cd-and-deployment",
+        "ai-llm-engineering",
+        "code-review"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/checklist.md",
+        "templates/threat-model.md"
+      ]
+    },
+    {
+      "name": "testing-strategy",
+      "category": "engineering",
+      "path": "skills/engineering/testing-strategy",
+      "description": "Chooses, writes and reports tests by risk: unit, integration, API, contract, end-to-end, performance, security, migration, regression and AI evaluation tests; covers normal, boundary, invalid, permission, failure, repeated and concurrent cases, and honest reporting of what ran. Use when adding tests, deciding what to test, fixing flaky tests, or before declaring work verified.",
+      "version": "0.1.0",
+      "related": [
+        "frontend-testing",
+        "debugging",
+        "code-review",
+        "backend-api-design",
+        "database-engineering"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/test-types.md",
+        "templates/test-plan.md"
+      ]
+    },
+    {
+      "name": "component-engineering",
+      "category": "frontend",
+      "path": "skills/frontend/component-engineering",
+      "description": "Designs and builds reusable UI components: deciding reuse versus new, API design (props, slots, variants), composition, state ownership, accessibility, styling with tokens, and documentation, in the project's existing framework. Use when creating or refactoring a component, building a component library, or when components have grown into unmaintainable conditional logic.",
+      "version": "0.1.0",
+      "related": [
+        "frontend-architecture",
+        "design-system-creation",
+        "accessibility-review",
+        "frontend-testing",
+        "ui-animation"
+      ],
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "design-to-code",
+      "category": "frontend",
+      "path": "skills/frontend/design-to-code",
+      "description": "Turns design references (screenshots, mockups, Figma exports, existing interfaces) into working front-end code that matches the intended visual identity: inventory of regions, type, color, spacing and states, component boundaries, implementation in the existing stack, rendered comparison and fixes. Use when asked to build or match a UI from an image, mockup or reference site.",
+      "version": "0.1.0",
+      "related": [
+        "visual-qa",
+        "component-engineering",
+        "design-system-creation",
+        "layout-and-responsive-design",
+        "accessibility-review",
+        "typography-selection"
+      ],
+      "files": [
+        "SKILL.md",
+        "templates/reference-inventory.md"
+      ]
+    },
+    {
+      "name": "frontend-architecture",
+      "category": "frontend",
+      "path": "skills/frontend/frontend-architecture",
+      "description": "Decides front-end structure: rendering strategy (static, server, client, streaming, hydration), state placement, routing, data fetching, forms, error boundaries, loading states, folder structure, build tooling and security basics, for new apps and existing codebases. Use when starting a web front end, adding a feature that spans routes and data, or when state, effects or rendering are tangled.",
+      "version": "0.1.0",
+      "related": [
+        "component-engineering",
+        "frontend-performance",
+        "frontend-testing",
+        "backend-api-design",
+        "accessibility-review"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/rendering-and-state.md"
+      ]
+    },
+    {
+      "name": "frontend-performance",
+      "category": "frontend",
+      "path": "skills/frontend/frontend-performance",
+      "description": "Measures and improves web front-end performance: Core Web Vitals (LCP, INP, CLS), bundle size, code splitting, images, fonts, rendering and hydration cost, caching and long-task reduction, always measured before and after. Use when a page feels slow, scores poorly, bundles are large, or before launching a content-heavy or public page.",
+      "version": "0.1.0",
+      "related": [
+        "animation-performance",
+        "frontend-architecture",
+        "performance-analysis",
+        "typography-selection"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/web-vitals-playbook.md"
+      ]
+    },
+    {
+      "name": "frontend-testing",
+      "category": "frontend",
+      "path": "skills/frontend/frontend-testing",
+      "description": "Plans and writes front-end tests: unit and component tests (user-centered queries), integration with mocked network, end-to-end browser tests, accessibility tests, visual regression, and test reliability, matched to risk. Use when adding tests to UI code, when front-end tests are flaky or brittle, or when deciding which kind of test a UI change needs.",
+      "version": "0.1.0",
+      "related": [
+        "testing-strategy",
+        "accessibility-review",
+        "visual-qa",
+        "component-engineering",
+        "frontend-architecture"
+      ],
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "visual-qa",
+      "category": "frontend",
+      "path": "skills/frontend/visual-qa",
+      "description": "Inspects rendered interfaces critically: layout and alignment, typography and wrapping, contrast, spacing consistency, responsive behavior, component states, animation, overflow and clipping, realistic content, loading, empty and error states, with an issue-severity system. Use after building or changing UI, before release, or when asked to review how an interface looks and behaves.",
+      "version": "0.1.0",
+      "related": [
+        "design-to-code",
+        "accessibility-review",
+        "animation-planning-and-review",
+        "frontend-testing",
+        "layout-and-responsive-design"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/checklist.md",
+        "templates/qa-report.md"
+      ]
+    },
+    {
+      "name": "animation-performance",
+      "category": "motion",
+      "path": "skills/motion/animation-performance",
+      "description": "Implements and tunes animation performance: choosing CSS, Web Animations API, SVG, Canvas, WebGL or a library; compositor-friendly properties; avoiding layout thrash; requestAnimationFrame use; cancellation and cleanup; frame-time measurement and profiling. Use when animation stutters, when choosing an animation approach or library, or before shipping heavy animation.",
+      "version": "0.1.0",
+      "related": [
+        "motion-design",
+        "ui-animation",
+        "svg-canvas-3d-animation",
+        "frontend-performance",
+        "reduced-motion-accessibility"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/library-selection.md",
+        "references/profiling-workflow.md"
+      ]
+    },
+    {
+      "name": "cinematic-motion",
+      "category": "motion",
+      "path": "skills/motion/cinematic-motion",
+      "description": "Designs expressive storytelling motion for creative websites, landing pages, portfolios, presentations and interactive experiences: opening sequences, camera-like movement, depth and layering, reveals, scene transitions, pacing, pauses and narrative progression. Use for portfolio, campaign or showcase pages, not for dashboards or ordinary product UI.",
+      "version": "0.1.0",
+      "related": [
+        "motion-design",
+        "scroll-animation",
+        "svg-canvas-3d-animation",
+        "animation-performance",
+        "reduced-motion-accessibility",
+        "animation-planning-and-review"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/storytelling-structure.md"
+      ]
+    },
+    {
+      "name": "micro-interactions",
+      "category": "motion",
+      "path": "skills/motion/micro-interactions",
+      "description": "Designs and builds small interaction details: hover, focus, press and release, selection, toggles, drag, copy confirmation, form success and error feedback, optimistic updates, undo and progress feedback that feel deliberate without slowing tasks. Use when polishing controls, adding feedback to user actions, or reviewing whether interface feedback is clear and fast.",
+      "version": "0.1.0",
+      "related": [
+        "motion-design",
+        "ui-animation",
+        "reduced-motion-accessibility",
+        "accessibility-review"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/recipes.md"
+      ]
+    },
+    {
+      "name": "motion-design",
+      "category": "motion",
+      "path": "skills/motion/motion-design",
+      "description": "Defines purposeful motion for interfaces: what should move and why, timing, easing, duration, staggering, choreography, continuity between states, interruption behavior, and a consistent motion language. Use when adding or reviewing any animation or transition, when motion feels random, slow or jarring, or when asked for polish. Produces a motion spec before implementation.",
+      "version": "0.1.0",
+      "related": [
+        "ui-animation",
+        "micro-interactions",
+        "animation-performance",
+        "reduced-motion-accessibility",
+        "animation-planning-and-review",
+        "visual-design-direction"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/principles-and-timing.md",
+        "templates/motion-spec.md",
+        "templates/motion-tokens.css"
+      ]
+    },
+    {
+      "name": "reduced-motion-accessibility",
+      "category": "motion",
+      "path": "skills/motion/reduced-motion-accessibility",
+      "description": "Makes animation safe and accessible: honoring prefers-reduced-motion with designed alternatives, pause and stop controls, seizure-safe flashing limits, vestibular-safe motion, and motion that does not block tasks. Use whenever adding or reviewing animation, parallax, auto-playing media, carousels or page transitions, and when asked about motion accessibility.",
+      "version": "0.1.0",
+      "related": [
+        "motion-design",
+        "accessibility-review",
+        "scroll-animation",
+        "ui-animation"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/patterns.md"
+      ]
+    },
+    {
+      "name": "scroll-animation",
+      "category": "motion",
+      "path": "skills/motion/scroll-animation",
+      "description": "Builds scroll-based animation: scroll-triggered reveals, scroll-linked transforms and progress bars, sticky and pinned sections, parallax, and long-form storytelling, with correct cleanup and fallbacks. Use when adding scroll effects to a page, when scroll animation is janky or hides content, or when deciding whether a scroll effect helps reading and navigation.",
+      "version": "0.1.0",
+      "related": [
+        "motion-design",
+        "animation-performance",
+        "reduced-motion-accessibility",
+        "cinematic-motion"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/scroll-recipes.md"
+      ]
+    },
+    {
+      "name": "svg-canvas-3d-animation",
+      "category": "motion",
+      "path": "skills/motion/svg-canvas-3d-animation",
+      "description": "Chooses and builds the right rendering technique for visual animation: CSS, SVG paths and morphing, Canvas 2D loops, or WebGL and 3D scenes (three.js style), with asset loading, resource cleanup, frame budgets, device limits and fallbacks. Use when adding illustrative, data-driven, particle or 3D animation to a web page, or when canvas or WebGL animation leaks memory or runs slowly.",
+      "version": "0.1.0",
+      "related": [
+        "motion-design",
+        "animation-performance",
+        "reduced-motion-accessibility",
+        "cinematic-motion"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/canvas-and-webgl-patterns.md",
+        "references/technique-selection.md"
+      ]
+    },
+    {
+      "name": "ui-animation",
+      "category": "motion",
+      "path": "skills/motion/ui-animation",
+      "description": "Implements animation for common interface components: buttons, menus, dialogs, drawers, tooltips, tabs, accordions, loaders and progress, toasts, validation feedback, list changes, expandable content and route transitions, consistent with the design system. Use when animating a specific UI component or transition in CSS, Web Animations API or a framework.",
+      "version": "0.1.0",
+      "related": [
+        "motion-design",
+        "micro-interactions",
+        "animation-performance",
+        "reduced-motion-accessibility",
+        "component-engineering"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/component-recipes.md"
+      ]
+    },
+    {
+      "name": "ai-llm-engineering",
+      "category": "specialist",
+      "path": "skills/specialist/ai-llm-engineering",
+      "description": "Builds reliable AI features: choosing between deterministic code, a single model call, a workflow, retrieval or agents; prompt and structured-output design, tool calling, RAG, embeddings, memory and context management, evaluation sets, safety against prompt injection and data leakage, latency and cost, monitoring, and classic machine learning workflows. Use when adding LLM, RAG, agent, speech, vision or ML features to a product.",
+      "version": "0.1.0",
+      "related": [
+        "security-review",
+        "testing-strategy",
+        "architecture-decisions",
+        "observability-and-incident-response",
+        "performance-analysis"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/evaluation.md",
+        "references/rag-and-agents.md"
+      ]
+    },
+    {
+      "name": "cli-and-library-design",
+      "category": "specialist",
+      "path": "skills/specialist/cli-and-library-design",
+      "description": "Designs command-line tools, libraries and SDKs: command and flag design, help output, configuration precedence, exit codes, streams, composability, error messages, public API surface, semantic versioning, deprecation, packaging, documentation and developer experience. Use when creating or changing a CLI, package, SDK or reusable module that other developers or scripts will depend on.",
+      "version": "0.1.0",
+      "related": [
+        "testing-strategy",
+        "ci-cd-and-deployment",
+        "documentation-and-handoff",
+        "architecture-decisions"
+      ],
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "desktop-and-mobile-development",
+      "category": "specialist",
+      "path": "skills/specialist/desktop-and-mobile-development",
+      "description": "Guides desktop and mobile application development: choosing native, cross-platform or web-wrapper approaches, app lifecycle, offline behavior and sync, permissions, navigation, local storage and credentials, background work and battery, crash reporting, accessibility, packaging, signing, auto-update and store release. Use when building, structuring or releasing desktop or mobile apps.",
+      "version": "0.1.0",
+      "related": [
+        "frontend-architecture",
+        "security-review",
+        "ci-cd-and-deployment",
+        "accessibility-review",
+        "architecture-decisions"
+      ],
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "game-development",
+      "category": "specialist",
+      "path": "skills/specialist/game-development",
+      "description": "Guides game development: defining the core loop and player experience, choosing an engine, structuring scenes and entities, fixed versus variable time steps, input, physics and collision, animation, audio, UI, AI and pathfinding, save systems, asset pipelines, frame-time and memory budgets, multiplayer basics, testing and playtesting, and packaging. Use when planning or building a game or game feature in any engine or framework.",
+      "version": "0.1.0",
+      "related": [
+        "svg-canvas-3d-animation",
+        "testing-strategy",
+        "performance-analysis",
+        "architecture-decisions",
+        "accessibility-review"
+      ],
+      "files": [
+        "SKILL.md",
+        "references/engine-selection.md",
+        "references/game-loop-and-performance.md"
+      ]
+    },
+    {
+      "name": "skill-authoring",
+      "category": "tooling",
+      "path": "skills/tooling/skill-authoring",
+      "description": "Creates, edits and validates Agent Skills in the portable SKILL.md format: scoping, naming, writing trigger-focused descriptions, structuring instructions with progressive disclosure, adding references, templates and scripts, testing triggers, and running this repository's validators. Use when asked to create a new skill, improve an existing skill, fix skill validation errors, or contribute a skill to this repository.",
+      "version": "0.1.0",
+      "related": [
+        "skill-installation",
+        "documentation-and-handoff",
+        "development-operating-rules"
+      ],
+      "files": [
+        "SKILL.md",
+        "templates/skill-template.md"
+      ]
+    },
+    {
+      "name": "skill-installation",
+      "category": "tooling",
+      "path": "skills/tooling/skill-installation",
+      "description": "Installs, updates, removes and verifies skills from the ai-development-system repository using its installer script, with dry-run previews, safe conflict handling and the right destination for each agent (Claude Code project or personal scope, Codex repo or personal scope, or a custom directory). Use when asked to install skills or a collection, update installed skills, list what is available, or troubleshoot why a skill is not loaded.",
+      "version": "0.1.0",
+      "related": [
+        "skill-authoring",
+        "documentation-and-handoff",
+        "development-operating-rules"
+      ],
+      "files": [
+        "SKILL.md"
+      ]
+    }
+  ],
+  "collections": [
+    {
+      "name": "ai-engineering",
+      "description": "Skills for AI products: LLM and retrieval engineering, evaluation, security, observability, cost and latency analysis.",
+      "when_to_use": "Use when adding LLM, RAG, agent or machine-learning features to an application.",
+      "skills": [
+        "ai-llm-engineering",
+        "requirements-and-research",
+        "architecture-decisions",
+        "security-review",
+        "testing-strategy",
+        "performance-analysis",
+        "observability-and-incident-response"
+      ]
+    },
+    {
+      "name": "backend-professional",
+      "description": "Backend engineering: architecture decisions, API design, database engineering, security review, testing and performance analysis.",
+      "when_to_use": "Use when building or reviewing services, APIs, data layers and their reliability and security.",
+      "skills": [
+        "architecture-decisions",
+        "backend-api-design",
+        "database-engineering",
+        "security-review",
+        "testing-strategy",
+        "performance-analysis"
+      ]
+    },
+    {
+      "name": "complete-development-system",
+      "description": "General-purpose engineering, delivery and design skills plus tooling for managing skills. Specialist areas (motion, AI, games, desktop and mobile) are separate collections.",
+      "when_to_use": "Use as the baseline set for a general project. Skills load progressively in supporting agents, so only names and descriptions cost context until a task matches.",
+      "skills": [
+        "frontend-architecture",
+        "component-engineering",
+        "design-to-code",
+        "layout-and-responsive-design",
+        "frontend-performance",
+        "frontend-testing",
+        "visual-qa",
+        "accessibility-review",
+        "architecture-decisions",
+        "backend-api-design",
+        "database-engineering",
+        "security-review",
+        "testing-strategy",
+        "performance-analysis",
+        "development-operating-rules",
+        "requirements-and-research",
+        "debugging",
+        "code-review",
+        "git-and-github",
+        "ci-cd-and-deployment",
+        "product-design",
+        "visual-design-direction",
+        "design-system-creation",
+        "color-palette-selection",
+        "typography-selection",
+        "refactoring",
+        "observability-and-incident-response",
+        "documentation-and-handoff",
+        "skill-authoring",
+        "skill-installation"
+      ]
+    },
+    {
+      "name": "creative-motion",
+      "description": "Expressive animation for portfolios, campaign pages and interactive stories: cinematic motion, SVG, canvas and 3D techniques, storyboarding and review.",
+      "when_to_use": "Use when building creative sites or showcase experiences where motion is part of the content, not for ordinary product UI.",
+      "skills": [
+        "motion-design",
+        "cinematic-motion",
+        "svg-canvas-3d-animation",
+        "scroll-animation",
+        "animation-planning-and-review",
+        "animation-performance",
+        "reduced-motion-accessibility"
+      ]
+    },
+    {
+      "name": "design-essentials",
+      "description": "Product thinking, visual direction, design systems, color, typography, layout and accessibility for building interfaces that suit their product.",
+      "when_to_use": "Use when designing or redesigning a UI, or when output looks generic and needs a deliberate visual direction.",
+      "skills": [
+        "product-design",
+        "visual-design-direction",
+        "design-system-creation",
+        "color-palette-selection",
+        "typography-selection",
+        "layout-and-responsive-design",
+        "accessibility-review"
+      ]
+    },
+    {
+      "name": "frontend-professional",
+      "description": "Professional front-end work: architecture, components, design-to-code, responsive layout, performance, testing, visual QA and accessibility.",
+      "when_to_use": "Use when building or maintaining web front ends from design references or product requirements.",
+      "skills": [
+        "frontend-architecture",
+        "component-engineering",
+        "design-to-code",
+        "layout-and-responsive-design",
+        "frontend-performance",
+        "frontend-testing",
+        "visual-qa",
+        "accessibility-review"
+      ]
+    },
+    {
+      "name": "full-stack-engineering",
+      "description": "Front end, back end, data, security, testing, version control and deployment for teams shipping complete web applications.",
+      "when_to_use": "Use when one agent or developer handles a feature from requirements through deployment.",
+      "skills": [
+        "frontend-architecture",
+        "component-engineering",
+        "design-to-code",
+        "layout-and-responsive-design",
+        "frontend-performance",
+        "frontend-testing",
+        "visual-qa",
+        "accessibility-review",
+        "architecture-decisions",
+        "backend-api-design",
+        "database-engineering",
+        "security-review",
+        "testing-strategy",
+        "performance-analysis",
+        "development-operating-rules",
+        "requirements-and-research",
+        "debugging",
+        "code-review",
+        "git-and-github",
+        "ci-cd-and-deployment"
+      ]
+    },
+    {
+      "name": "game-development",
+      "description": "Game development: core loop and engine choice, architecture, real-time animation and rendering, performance, testing and packaging.",
+      "when_to_use": "Use when planning or building a game or a game feature in any engine or framework.",
+      "skills": [
+        "game-development",
+        "architecture-decisions",
+        "svg-canvas-3d-animation",
+        "animation-performance",
+        "testing-strategy",
+        "performance-analysis",
+        "ci-cd-and-deployment"
+      ]
+    },
+    {
+      "name": "motion-and-interaction",
+      "description": "Purposeful motion for interfaces: motion design, component animation, micro-interactions, scroll effects, performance and reduced-motion accessibility.",
+      "when_to_use": "Use when adding or reviewing transitions, animation or interaction feedback in a product interface.",
+      "skills": [
+        "motion-design",
+        "ui-animation",
+        "micro-interactions",
+        "scroll-animation",
+        "animation-performance",
+        "reduced-motion-accessibility"
+      ]
+    },
+    {
+      "name": "platform-apps-and-tools",
+      "description": "Desktop, mobile, command-line and library development with the security, testing and release practices they need.",
+      "when_to_use": "Use when building installable apps, CLIs, SDKs or reusable packages rather than web services.",
+      "skills": [
+        "desktop-and-mobile-development",
+        "cli-and-library-design",
+        "security-review",
+        "testing-strategy",
+        "ci-cd-and-deployment",
+        "documentation-and-handoff",
+        "accessibility-review"
+      ]
+    }
+  ]
+}

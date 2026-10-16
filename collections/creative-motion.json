@@ -1,0 +1,14 @@
+{
+  "name": "creative-motion",
+  "description": "Expressive animation for portfolios, campaign pages and interactive stories: cinematic motion, SVG, canvas and 3D techniques, storyboarding and review.",
+  "when_to_use": "Use when building creative sites or showcase experiences where motion is part of the content, not for ordinary product UI.",
+  "skills": [
+    "motion-design",
+    "cinematic-motion",
+    "svg-canvas-3d-animation",
+    "scroll-animation",
+    "animation-planning-and-review",
+    "animation-performance",
+    "reduced-motion-accessibility"
+  ]
+}

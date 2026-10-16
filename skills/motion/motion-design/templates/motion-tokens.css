@@ -1,0 +1,30 @@
+/* Motion tokens. Copy into the project's tokens file and adjust values to the chosen motion language. */
+:root {
+  --dur-instant: 80ms;
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 320ms;
+  --dur-page: 400ms;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);     /* entering, appearing */
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);      /* leaving, disappearing */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* moving between two visible positions */
+
+  --stagger-step: 30ms;   /* delay per sibling; cap total stagger around 300-400ms */
+  --distance-small: 8px;  /* entrance offsets: keep small for functional UI */
+  --distance-medium: 16px;
+}
+
+/* Safety net only. Designed reduced-motion alternatives are better; see reduced-motion-accessibility. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-instant: 1ms;
+    --dur-fast: 1ms;
+    --dur-base: 1ms;
+    --dur-slow: 1ms;
+    --dur-page: 1ms;
+    --stagger-step: 0ms;
+    --distance-small: 0px;
+    --distance-medium: 0px;
+  }
+}

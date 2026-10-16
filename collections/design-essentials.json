@@ -1,0 +1,14 @@
+{
+  "name": "design-essentials",
+  "description": "Product thinking, visual direction, design systems, color, typography, layout and accessibility for building interfaces that suit their product.",
+  "when_to_use": "Use when designing or redesigning a UI, or when output looks generic and needs a deliberate visual direction.",
+  "skills": [
+    "product-design",
+    "visual-design-direction",
+    "design-system-creation",
+    "color-palette-selection",
+    "typography-selection",
+    "layout-and-responsive-design",
+    "accessibility-review"
+  ]
+}

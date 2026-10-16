@@ -1,0 +1,13 @@
+{
+  "name": "motion-and-interaction",
+  "description": "Purposeful motion for interfaces: motion design, component animation, micro-interactions, scroll effects, performance and reduced-motion accessibility.",
+  "when_to_use": "Use when adding or reviewing transitions, animation or interaction feedback in a product interface.",
+  "skills": [
+    "motion-design",
+    "ui-animation",
+    "micro-interactions",
+    "scroll-animation",
+    "animation-performance",
+    "reduced-motion-accessibility"
+  ]
+}

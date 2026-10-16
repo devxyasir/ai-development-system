@@ -1,0 +1,14 @@
+{
+  "name": "platform-apps-and-tools",
+  "description": "Desktop, mobile, command-line and library development with the security, testing and release practices they need.",
+  "when_to_use": "Use when building installable apps, CLIs, SDKs or reusable packages rather than web services.",
+  "skills": [
+    "desktop-and-mobile-development",
+    "cli-and-library-design",
+    "security-review",
+    "testing-strategy",
+    "ci-cd-and-deployment",
+    "documentation-and-handoff",
+    "accessibility-review"
+  ]
+}

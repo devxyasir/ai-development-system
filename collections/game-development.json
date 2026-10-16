@@ -1,0 +1,14 @@
+{
+  "name": "game-development",
+  "description": "Game development: core loop and engine choice, architecture, real-time animation and rendering, performance, testing and packaging.",
+  "when_to_use": "Use when planning or building a game or a game feature in any engine or framework.",
+  "skills": [
+    "game-development",
+    "architecture-decisions",
+    "svg-canvas-3d-animation",
+    "animation-performance",
+    "testing-strategy",
+    "performance-analysis",
+    "ci-cd-and-deployment"
+  ]
+}

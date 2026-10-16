@@ -1,0 +1,17 @@
+{
+  "name": "full-stack-engineering",
+  "description": "Front end, back end, data, security, testing, version control and deployment for teams shipping complete web applications.",
+  "when_to_use": "Use when one agent or developer handles a feature from requirements through deployment.",
+  "includes": [
+    "frontend-professional",
+    "backend-professional"
+  ],
+  "skills": [
+    "development-operating-rules",
+    "requirements-and-research",
+    "debugging",
+    "code-review",
+    "git-and-github",
+    "ci-cd-and-deployment"
+  ]
+}
